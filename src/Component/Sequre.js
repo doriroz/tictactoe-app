@@ -53,7 +53,10 @@ const Sequre = (props) => {
         const winner = checkWinner();
         console.log(winner);
         if(winner!=0){
-            appStyle.setStylewin({opacity:1});
+            appStyle.setStylewin({
+                opacity:1,
+                fontSize:"40px",
+            });
             
             if(!winning) {
                 appStyle.setWinner(props.board[winner[0]]);

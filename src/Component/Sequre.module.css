@@ -6,9 +6,13 @@
     margin:3px;
     cursor: pointer;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 60px;
     line-height: 100px;
 }
+
+/* .X,.O{
+    font-size: 100px;
+} */
 
 .X{
     color: "red";

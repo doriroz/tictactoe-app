@@ -13,14 +13,22 @@ const History = (props) => {
     }
 
     const listStep = historyContext.history?.map((val,ind)=>{
-        console.log(historyContext.history);
-        return <li key={ind} onClick={()=>clickHandler(ind)}>Step {val.counter}</li>
+        const disabled = historyContext.winner!=null?true:false;
+        const styled = historyContext.winner!=null ? {border:"none"}:null;
+        return <button key={ind} c
+                       style={styled}
+                       className={classes.historyBtn} 
+                       onClick={()=>clickHandler(ind)}
+                       disabled={disabled}>Step {val.counter}</button>
+        
+        // <li key={ind} onClick={()=>clickHandler(ind)}>Step {val.counter}</li>
     });
 
     return <div className={classes.history}>
-        <ul>
+        {listStep}
+        {/* <ul>
             {listStep} 
-        </ul>
+        </ul> */}
     </div>
 }
 

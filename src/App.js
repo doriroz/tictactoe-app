@@ -6,9 +6,13 @@ import History from './Component/History';
 import { useState } from 'react';
 import appContext from './styleContext';
 
+
 function App() {
   const [winner,setWinner]=useState();
-  const [stylewin,setStylewin]=useState({opacity:0});
+  const [stylewin,setStylewin]=useState({
+    opacity:0,
+    fontSize:"40px",
+  });
   const [board,setBoard] = 
     useState(Array(9).fill(null));
   const [history,setHistory]=useState([]);
